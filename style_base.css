@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
 	box-sizing: border-box;
 }
@@ -201,6 +204,8 @@ a:hover {
   left: 9px;
   bottom: 4px;
   opacity: var(--opt1);
+  pointer-events: none;
+  user-select: none;
   /* transition: .15s; */
 }
 .slider .s_icn2 {
@@ -210,6 +215,8 @@ a:hover {
   right: 9px;
   bottom: 4px;
   opacity: var(--opt2);
+  pointer-events: none;
+  user-select: none;
   /* transition: .15s; */
 }
 
@@ -282,7 +289,6 @@ a:hover {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-  z-index: 20;
   visibility: visible;
 }
 .ppic {
@@ -290,12 +296,37 @@ a:hover {
   height: 300px;
 }
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: flex-start;
   width: auto;
   margin: 5px;
   padding: 5px;
 }
 .about > p {
   text-align: justify;
+}
+
+.about .projects {
+  font-size: 1em;
+  border: 2px solid var(--color_6);
+  border-radius: 3px;
+  background-color: transparent;
+  text-transform: capitalize;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  color: var(--t_color);
+}
+
+.about > .projects:hover {
+  background-color: var(--color_6);
+  color: var(--colorw);
+  transition: linear 0.1s;
 }
 
 .indicator {
@@ -351,21 +382,86 @@ a:hover {
 .interest {
   position: inherit;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1400px;
-  background: #4f5141
 }
 
+.ints_title {
+  width: auto;
+  background: #1fc94c;
+  height: 100px;
+  padding: 0;
+}
+
+.ints_content {
+  position: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ints_div {
+  flex: 0 0 32%;
+  max-width: 32%;
+  height:300px;
+  margin: 5px;
+  box-sizing: border-box;
+  background: black;
+}
+
+
+
+/* experties */
 .experties {
   position: inherit;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1400px;
-  background: #4e2dc9
 }
+
+
+
 .project {
   position: inherit;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1400px;
-  background: #1fc94c
+}
+
+.pro_title {
+  width: auto;
+  background: #1fc94c;
+  height: 100px;
+  padding: 0;
+}
+
+.pro_content {
+  position: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pro_div {
+  height:300px;
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  margin: 5px;
+  box-sizing: border-box;
+  background: black;
+}
+
+.aboutme {
+  position: inherit;
+  width: 100%;
+  max-width: 1400px;
+  background: #c91fa7
 }
 
 /* footer............ */
@@ -551,6 +647,11 @@ footer .footer__btn:hover {
   .menu {
     visibility: collapse;
   }
+
+  .ints_div {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -581,9 +682,12 @@ footer .footer__btn:hover {
     justify-content: space-around;
   }
 
+  .ints_div {
+    flex: 0 0 98%;
+    max-width: 98%;
+  }
+
   div#p1   {order: 2;}
   div#p2  {order: 1;}
-
-
 }
 
