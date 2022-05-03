@@ -1,0 +1,12 @@
+encoder, hall sensors
+lidar-2d 3d
+radar
+camera
+sensor fusion
+slam
+path planning
+motor driver
+pwm
+autonomus vechile archtecture
+motion model, sensor model, belief system
+ 

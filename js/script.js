@@ -19,14 +19,29 @@ const themes = {
     },
 }
 
+function getTheme() {
+    return localStorage.getItem('theme') || 0;
+  }
+function saveTheme(theme) {
+    localStorage.setItem('theme', theme);
+  }
+
+
+
+    
+    
+//   }
+
 const inputs = document.getElementById('change')
 
 inputs.addEventListener('click', function () {
     if (inputs.checked) {
         var theme = themes[Object.keys(themes)[1]];
+        saveTheme(1);
     }
     else {
         var theme = themes[Object.keys(themes)[0]];
+        saveTheme(0);
     }
     activateTheme(theme);
 });
@@ -78,3 +93,22 @@ function myFunction(x) {
 var x = window.matchMedia("(min-width: 720px)")
 myFunction(x)
 x.addListener(myFunction) // Attach listener function on state changes
+
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    console.info( getTheme() );
+
+    if(getTheme()==1) {
+        var theme = themes[Object.keys(themes)[1]];
+        inputs.checked = true;
+        activateTheme(theme);
+    }
+    else {
+        var theme = themes[Object.keys(themes)[0]];
+        inputs.checked = false;
+        activateTheme(theme);
+        
+    }
+}
+
+
+// 11 12
