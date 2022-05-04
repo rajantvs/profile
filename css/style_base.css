@@ -555,64 +555,64 @@ a:hover {
   justify-content: left;
   height: 15px;
   width: 100%;
-  background-color: var(--s_color2);
+  background-color: var(--hover_color);
   border-radius: 2px;
   padding-left: 5px;
 }
 .p_bar1 {
   height: 10px;
   width: 80%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 .p_bar2 {
   height: 10px;
   width: 80%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 .p_bar3 {
   height: 10px;
   width: 60%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 
 .p_bar11 {
   height: 10px;
   width: 60%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 .p_bar21 {
   height: 10px;
   width: 60%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 .p_bar31 {
   height: 10px;
   width: 40%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 
 .p_bar12 {
   height: 10px;
   width: 80%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 .p_bar22 {
   height: 10px;
   width: 60%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 .p_bar32 {
   height: 10px;
   width: 60%;
-  background-color: var(--hover_color);
+  background-color: var(--s_color2);
   border-radius: 2px;
 }
 
@@ -676,6 +676,7 @@ a:hover {
 
 .pcont h2 {
   text-align: left;
+  text-transform: capitalize;
 }
 
 .pcont p {
